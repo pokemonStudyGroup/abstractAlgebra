@@ -1,0 +1,62 @@
+% ---------
+%  Compile with "pdflatex hw0".
+% --------
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{jeffe,handout,graphicx}
+\usepackage[utf8]{inputenc}     % Allow some non-ASCII Unicode in source
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{tikz}
+
+%  Redefine suits
+\usepackage{pifont}
+\def\Spade{\text{\ding{171}}}
+\def\Heart{\text{\textcolor{Red}{\ding{170}}}}
+\def\Diamond{\text{\textcolor{Red}{\ding{169}}}}
+\def\Club{\text{\ding{168}}}
+
+\def\Cdot{\mathbin{\text{\normalfont \textbullet}}}
+\def\Sym#1{\textbf{\texttt{\color{BrickRed}#1}}}
+\let\oriinfty=\infty
+\def\infty{{\oriinfty\llap{\vrule height.24em depth-.2em width.2em}}}
+
+%%% magic code starts
+\mathcode`*=\string"8000
+\begingroup
+\catcode`*=\active
+\xdef*{\noexpand\textup{\string*}}
+\endgroup
+%%% magic code ends
+%%% check mark
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+% =====================================================
+%   Define common stuff for solution headers
+% =====================================================
+\Class{Abstract Algebra}
+\Semester{}
+\Authors{1}
+\AuthorOne{[Your name here]}
+%\Section{}
+
+% =====================================================
+\begin{document}
+
+% Copy this section again for a new solution
+% ---------------------------------------------------------
+\ChapterHeader{0}{0} % replace Chapter with Exercise for a different header
+\begin{solution} \hfill \\
+	\begin{enumerate}
+		\item [a)] 
+    \end{enumerate}
+\end{solution}
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+% ---------------------------------------------------------
+
+\end{document}
+
