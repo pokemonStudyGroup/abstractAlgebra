@@ -39,4 +39,4 @@ main() {
   done
 }
 
-main | tee output
+main 2>&1 | tee /tmp/output
