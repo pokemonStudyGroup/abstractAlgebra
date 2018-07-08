@@ -1,2 +1,3 @@
+*.swp
 *log*
 backup_infrastructure/__pycache__/*
