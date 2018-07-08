@@ -6,7 +6,8 @@ cleanup() {
   popd
   exit
 }
- 
+
+echo $$ > /tmp/updater_pid 
 pushd /home/ubuntu/abstractAlgebra/
 
 while [ true ]
@@ -28,5 +29,10 @@ do
   }
   
   echo "Sleeping..."
-  sleep $(( 60 * 60 * 24 ))
+
+  sleep $(( $(cat /tmp/interval) )) &
+  sleep_pid=$!
+  echo $sleep_pid > /tmp/sleep_pid
+  wait $sleep_pid
+
 done
