@@ -7,32 +7,36 @@ cleanup() {
   exit
 }
 
-echo $$ > /tmp/updater_pid 
-pushd /home/ubuntu/abstractAlgebra/
-
-while [ true ]
-do
-
-  echo "Downloading source..."
-  time python3 get_source.py
+main() {
+  echo $$ > /tmp/updater_pid 
+  pushd /home/ubuntu/abstractAlgebra/
   
-  echo "Extracting source..."
-  time {
-    yes | unzip /tmp/source.zip
-  }
+  while [ true ]
+  do
   
-  echo "Pushing to github..."
-  time {
-    git add .
-    git commit -m "Update at $(date)"
-    git push origin master
-  }
+    echo "Downloading source..."
+    time python3 get_source.py
+    
+    echo "Extracting source..."
+    time {
+      yes | unzip /tmp/source.zip
+    }
+    
+    echo "Pushing to github..."
+    time {
+      git add .
+      git commit -m "Update at $(date)"
+      git push origin master
+    }
+    
+    echo "Sleeping..."
   
-  echo "Sleeping..."
+    sleep $(( $(cat /tmp/interval) )) &
+    sleep_pid=$!
+    echo $sleep_pid > /tmp/sleep_pid
+    wait $sleep_pid
+  
+  done
+}
 
-  sleep $(( $(cat /tmp/interval) )) &
-  sleep_pid=$!
-  echo $sleep_pid > /tmp/sleep_pid
-  wait $sleep_pid
-
-done
+main | tee output
