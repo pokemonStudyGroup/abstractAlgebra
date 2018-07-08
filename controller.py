@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return open('/tmp/output', 'r').read()
+  return open('/tmp/output', 'r').read().replace('\n', '<br>')
 
 @app.route('/refresh')
 def refresh():
