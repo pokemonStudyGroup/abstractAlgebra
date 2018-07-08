@@ -1,6 +1,8 @@
 #!/bin/bash
 trap cleanup INT
 
+INFRA_DIR="/home/ubuntu/abstractAlgebra/backup_infrastructure/"
+
 cleanup() {
   echo "Killed"
   popd
@@ -9,13 +11,13 @@ cleanup() {
 
 main() {
   echo $$ > /tmp/updater_pid 
-  pushd /home/ubuntu/abstractAlgebra/
+  pushd /home/ubuntu/abstractAlgebra/tex_source/
   
   while [ true ]
   do
   
     echo "Downloading source..."
-    time python3 get_source.py
+    time python3 $INFRA_DIR"get_source.py"
     
     echo "Extracting source..."
     time {
