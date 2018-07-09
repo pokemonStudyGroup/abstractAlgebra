@@ -1,5 +1,11 @@
-<html>
+{% extends 'base.html' %}
+
+{% block title %}
+Backup Service
+{% endblock %}
+
+{% block content %}
 <a href=http://18.220.120.4/refresh>Backup now</a><br>
 <a href=http://18.220.120.4/set_interval>Set interval</a><br>
-{}
-</html>
+{{ output }}
+{% endblock %}

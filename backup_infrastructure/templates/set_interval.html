@@ -1,12 +1,19 @@
-<html>
+{% extends 'base.html' %}
+
+{% block title %}
+Set Interval
+{% endblock %}
+
+{% block content %}
 <script>
-  function set_interval() \{
+  function set_interval() {
     var new_interval = document.getElementById('interval').value;
     window.location = window.location + "?interval=" + new_interval;
-  \}
+  }
 </script>
-Interval is currently {}.<br>
-{}s until current interval expires.<br>
+
+Interval is currently {{ interval }}.<br>
+{{ expiration }}s until current interval expires.<br>
 To set interval use /set_interval?interval=(interval in s).<br>
 <a href=http://18.220.120.4/>index</a>
-</html>
+{% endblock %}
