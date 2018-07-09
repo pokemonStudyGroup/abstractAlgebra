@@ -32,7 +32,7 @@ def set_interval():
 
       interval = int(open('/tmp/interval', 'r').read().strip())
 
-      return INTERVAL_TEMPLATE.format(interval, interval - running_time)
+      return set_interval_template.format(interval, interval - running_time)
 
     open('/tmp/interval', 'w').write(new_interval)
     return refresh()
