@@ -7,5 +7,5 @@ Backup Service
 {% block content %}
 <a href=http://18.220.120.4/refresh>Backup now</a><br>
 <a href=http://18.220.120.4/set_interval>Set interval</a><br>
-{{ output }}
+{{ output.replace('\n', '<br>') }}
 {% endblock %}
