@@ -11,9 +11,8 @@ Set Interval
     window.location = window.location + "?interval=" + new_interval;
   }
 </script>
-
 Interval is currently {{ interval }}.<br>
 {{ expiration }}s until current interval expires.<br>
-To set interval use /set_interval?interval=(interval in s).<br>
+<input id='interval'></input><button onclick='set_interval()'>Change interval</button><br>
 <a href=http://18.220.120.4/>index</a>
 {% endblock %}
