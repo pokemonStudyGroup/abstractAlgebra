@@ -71,11 +71,29 @@ However, $r<n$ and $n$ is the least positive integer such that $a^n=e$, $\theref
 % ---------------------------------------------------------
 \ExerciseHeader{4}{4} % replace Chapter with Exercise for a different header
 \begin{itemize}
+    \item[1)] Prove or disprove each of the following statements.
+    \begin{itemize}
+        \item [a)]All of the generators of $\mathbb{Z}_{60}$ are prime.
+        \item [b)] $U(8)$ is cyclic.
+        \item [c)]$\mathbb{Q}$ is cyclic.
+        \item [d)]If every proper subgroup of a group $G$ is cyclic, then $G$ is a cyclic group.
+        \item [e)]A group with a finite number of subgroups is finite.
+        \begin{solution} \hfill \\
+            We know that for any finite group, there are a finite number of subgroups upper bounded by the cardinality of the powerset of the group.\\
+            Therefore, we just need to show that there are no infinite groups with finite proper subgroups. Suppose $G$ is an infinite group with a finite collection of proper subgroups $S_G$.
+        \end{solution}
+
+    \end{itemize}
     \item[46)] Prove that $z=\cos\theta + i\cdot \sin\theta$ has infinite order for some $\theta \in \mathbb{Q}$\\
-    To avoid ambiguity let $\e$ be the identity element.
     \begin{solution} \hfill \\
+        To avoid ambiguity let $\e$ be the identity element.
         $$z=e^{i\theta}, \quad \e=1=e^{2i\pi}$$
-        We want that for some $k\in \mathbb{Z}^+$, $z^k=\e=e^{2ni\pi}$ for some $n\in \mathbb{Z}^+$. This gives 
+        We want that for some $k\in \mathbb{Z}^+$, $z^k=\e=e^{2ni\pi}$ for some $n\in \mathbb{Z}^+$. This gives us:
+        $$ik\theta=2ni\pi$$
+        $$k\theta=2n\pi$$
+        $$\frac{k}{2n}\theta=\pi$$
+        Since $\frac{k}{2n}$ and $\theta \in \mathbb{Q}$, $\frac{k}{2n}\theta \in \mathbb{Q}$. However, $\pi \notin \mathbb{Q}$, contradiction,
+        hence the order of $z$ is $\infty$.
     \end{solution}
 \end{itemize}
 \vspace{6pt}
