@@ -1,0 +1,86 @@
+% ---------
+%  Compile with "pdflatex hw0".
+% --------
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{jeffe,handout,graphicx}
+\usepackage[utf8]{inputenc}     % Allow some non-ASCII Unicode in source
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{tikz}
+
+%  Redefine suits
+\usepackage{pifont}
+\def\Spade{\text{\ding{171}}}
+\def\Heart{\text{\textcolor{Red}{\ding{170}}}}
+\def\Diamond{\text{\textcolor{Red}{\ding{169}}}}
+\def\Club{\text{\ding{168}}}
+
+\def\Cdot{\mathbin{\text{\normalfont \textbullet}}}
+\def\Sym#1{\textbf{\texttt{\color{BrickRed}#1}}}
+\let\oriinfty=\infty
+\def\infty{{\oriinfty\llap{\vrule height.24em depth-.2em width.2em}}}
+
+%%% magic code starts
+\mathcode`*=\string"8000
+\begingroup
+\catcode`*=\active
+\xdef*{\noexpand\textup{\string*}}
+\endgroup
+%%% magic code ends
+%%% check mark
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+% =====================================================
+%   Define common stuff for solution headers
+% =====================================================
+\Class{Abstract Algebra}
+\Semester{}
+\Authors{1}
+\AuthorOne{[Your name here]}
+%\Section{}
+
+% =====================================================
+\begin{document}
+
+% Copy this section again for a new solution
+% ---------------------------------------------------------
+\GenericHeader{Proposition}{4}{12} % replace Chapter with Exercise for a different header
+\begin{solution} \hfill \\
+In a group $G=<a>$ of order $n$, $a^k=e$ iff $n|k$:
+Proof:
+By the division theorem:
+$$k = m(n)+r, \quad 0\leq r<n, m\in \mathbb{Z}^+$$
+$$\Rightarrow a^k = a^{m(n)+r}$$
+$$\Rightarrow a^k = a^{m(n)}a^{r}$$
+$$\Rightarrow a^k = e^{m}a^{r}$$
+$$\Rightarrow a^k = e\cdot a^{r}$$
+$$\Rightarrow e = e\cdot a^{r}$$
+$$\Rightarrow e = a^{r}$$
+
+However, $r<n$ and $n$ is the least positive integer such that $a^n=e$, $\therefore$ $r = 0$ and $n|k$.
+\end{solution}
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+% ---------------------------------------------------------
+
+% Copy this section again for a new solution
+% ---------------------------------------------------------
+\ExerciseHeader{4}{4} % replace Chapter with Exercise for a different header
+\begin{itemize}
+    \item[46)] Prove that $z=\cos\theta + i\cdot \sin\theta$ has infinite order for some $\theta \in \mathbb{Q}$\\
+    To avoid ambiguity let $\e$ be the identity element.
+    \begin{solution} \hfill \\
+        $$z=e^{i\theta}, \quad \e=1=e^{2i\pi}$$
+        We want that for some $k\in \mathbb{Z}^+$, $z^k=\e=e^{2ni\pi}$ for some $n\in \mathbb{Z}^+$. This gives 
+    \end{solution}
+\end{itemize}
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+% ---------------------------------------------------------
+\end{document}
+

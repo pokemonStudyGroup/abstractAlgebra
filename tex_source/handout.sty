@@ -227,8 +227,35 @@
 \end{center}
 }
 
+\long\def\GenericHeader#1#2#3{
+\headers{\@Class\ \@Semester}{#1 #2.#3}{{\@NetIDOne}\ifnum\theAuthors>1{/\@NetIDTwo}\fi\ifnum\theAuthors>2{/\@NetIDThree}\fi}
+\thispagestyle{plain}
+\setcounter{page}{1}
+\begin{center}
+\fbox{\hbox to 0.97\linewidth{
+\def\arraystretch{1.05}
+\Large
+\begin{tabular}{@{}l}
+	\@Class\ \@Semester\\
+	{#1} {#2}.{#3}\\
+	\ifx\@Section\@empty~\else Return section: \@Section\fi
+\end{tabular}
+\hfill
+\begin{tabular}{r@{~}l@{}}
+	{\@AuthorOne} & ({\@NetIDOne})
+	\\
+	\ifnum\theAuthors>1\quad{\@AuthorTwo}\fi &
+	\ifnum\theAuthors>1({\@NetIDTwo})\fi
+	\\
+	\ifnum\theAuthors>2\quad{\@AuthorThree}\fi &
+	\ifnum\theAuthors>2({\@NetIDThree})\fi
+\end{tabular}
+}}
+\end{center}
+}
+
 \long\def\ChapterHeader#1#2{
-\headers{\@Class\ \@Semester}{HW #1.#2}{{\@NetIDOne}\ifnum\theAuthors>1{/\@NetIDTwo}\fi\ifnum\theAuthors>2{/\@NetIDThree}\fi}
+\headers{\@Class\ \@Semester}{Chapter #1.#2}{{\@NetIDOne}\ifnum\theAuthors>1{/\@NetIDTwo}\fi\ifnum\theAuthors>2{/\@NetIDThree}\fi}
 \thispagestyle{plain}
 \setcounter{page}{1}
 \begin{center}
