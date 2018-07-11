@@ -39,7 +39,7 @@
 \Class{Abstract Algebra}
 \Semester{}
 \Authors{1}
-\AuthorOne{[Your name here]}
+\AuthorOne{Aneesh Durg}
 %\Section{}
 
 % =====================================================
@@ -78,9 +78,13 @@ Prove that numbers that are not relatively prime cannot be generators
     Suppose $<k'>$ is not a generator for $\mathbb{Z}_n$ and contains $z$ values, then $p(mk')$ can take at most $z$ values.\\
     Suppose $<k'>$ is a generator for $\mathbb{Z}_n$, then it remains to be seen if $<p>$ is also a generator. However, $pn'=0_n$ and since  $0<n'<n$, $<p>$ can have at most $n'$ values.
 \end{solution}
+\vspace{6pt}
+\hrule
+\vspace{6pt}
 Prove that numbers that are relatively prime must be generators
 \begin{solution} \hfill \\
-    If $\forall p|n, $
+    Need to show that if $\forall$ primes $p$ such that $p|n$, $p\nmid r$ then $<r> = \mathbb{Z}_n$. We know that $r=p_1\cdot p_2\cdot p_3\dots$ for some sequence of primes. However, we just need to show that this is true for the case where $r=p$ for any prime $p\nmid n$. Once we show this, given $k$ primes (not necessarily unique) we know that $<p_1>=<p_2>=\dots =<p_k>=<\Pi_{m=1}^{k} p_m>=\mathbb{Z}_n$\\
+    Suppose for some $m<n$, $mp=_n 0$ (which is to say that $p$ is not a generator). Then $mp=n$ and thus $p\mid n$, contradiction, $<p>=\mathbb{Z}_n$
 \end{solution}
 \vspace{6pt}
 \hrule
@@ -113,6 +117,9 @@ Prove that numbers that are relatively prime must be generators
         \end{solution}
 
     \end{itemize}
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
     \item[46)] Prove that $z=\cos\theta + i\cdot \sin\theta$ has infinite order for some $\theta \in \mathbb{Q}$\\
     \begin{solution} \hfill \\
         To avoid ambiguity let $\e$ be the identity element.
