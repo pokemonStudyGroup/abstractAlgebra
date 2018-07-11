@@ -69,11 +69,34 @@ However, $r<n$ and $n$ is the least positive integer such that $a^n=e$, $\theref
 
 % Copy this section again for a new solution
 % ---------------------------------------------------------
+\GenericHeader{Scratch}{4}{0} % replace Chapter with Exercise for a different header
+Prove that numbers that are not relatively prime cannot be generators
+\begin{solution} \hfill \\
+    Suppose $n=n'p$, $k=k'p$. Where $p < n$ is prime, $0< n'<n$ and $0<k'<k$\\
+    Let's consider $<k>$.
+    $$mk=p(mk')$$
+    Suppose $<k'>$ is not a generator for $\mathbb{Z}_n$ and contains $z$ values, then $p(mk')$ can take at most $z$ values.\\
+    Suppose $<k'>$ is a generator for $\mathbb{Z}_n$, then it remains to be seen if $<p>$ is also a generator. However, $pn'=0_n$ and since  $0<n'<n$, $<p>$ can have at most $n'$ values.
+\end{solution}
+Prove that numbers that are relatively prime must be generators
+\begin{solution} \hfill \\
+    If $\forall p|n, $
+\end{solution}
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+% ---------------------------------------------------------
+
+% Copy this section again for a new solution
+% ---------------------------------------------------------
 \ExerciseHeader{4}{4} % replace Chapter with Exercise for a different header
 \begin{itemize}
     \item[1)] Prove or disprove each of the following statements.
     \begin{itemize}
         \item [a)]All of the generators of $\mathbb{Z}_{60}$ are prime.
+        \begin{solution} \hfill \\
+            True. Only numbers that are relatively prime can be a generator (see scratch 4.0 above), no composite numbers are relatively prime to 60 and less than 60, with the first relatively prime number being 77.
+        \end{solution}
         \item [b)] $U(8)$ is cyclic.
         \item [c)]$\mathbb{Q}$ is cyclic.
         \begin{solution} \hfill \\
