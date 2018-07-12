@@ -98,25 +98,55 @@ Prove that numbers that are relatively prime must be generators
     \item[1)] Prove or disprove each of the following statements.
     \begin{itemize}
         \item [a)]All of the generators of $\mathbb{Z}_{60}$ are prime.
-        \begin{solution} \hfill \\
+        \begin{solution}
             True. Only numbers that are relatively prime can be a generator (see scratch 4.0 above), no composite numbers are relatively prime to 60 and less than 60, with the first relatively prime number being 77.
         \end{solution}
         \item [b)] $U(8)$ is cyclic.
         \item [c)]$\mathbb{Q}$ is cyclic.
-        \begin{solution} \hfill \\
-            False. Consider $S_3$.
+        \begin{solution}
+            False. Suppose $x$ is a generator. $\exists y\in [x,x+x]$ therefore $x$ cannot generate $y$.
         \end{solution}
         \item [d)]If every proper subgroup of a group $G$ is cyclic, then $G$ is a cyclic group.
-        \begin{solution} \hfill \\
+        \begin{solution}
             False. Consider $S_3$.
         \end{solution}
         \item [e)]A group with a finite number of subgroups is finite.
-        \begin{solution} \hfill \\
+        \begin{solution}
             We know that for any finite group, there are a finite number of subgroups upper bounded by the cardinality of the powerset of the group.\\
             Therefore, we just need to show that there are no infinite groups with finite proper subgroups. Suppose $G$ is an infinite group with a finite collection of proper subgroups $S_G$.
         \end{solution}
 
     \end{itemize}
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[24)] Number of generators for $\mathbb{Z}_{pq}$?
+    \begin{solution}
+        $pq - \lfloor\frac{pq}{p}\rfloor - \lfloor\frac{pq}{q}\rfloor$
+    \end{solution}
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[31)] Let $G$ be an abelian group. Show that the elements of finite order in $G$ form a subgroup. This subgroup is called the \textbf{torsion subgroup} of $G$.
+    \begin{solution} \hfill \\
+        Let $G=<S,*>$ and $S'$ be the subset of $S$ of elements with finite order. We first need to prove that $S'$ is closed under $*$. For some $a, b\in G$, we have $a*b=c$.\\
+        Suppose $a^n=e$ and $a\b^m=e$. Then we have that
+        $$c^{nm}=(ab)^{nm}=\left(a^{nm}*b^{nm}\right)=e^m*e^n=e$$
+        Thus $c$ has order at most $nm$ and thus $c\in S'$.\\
+        Since $G$ was a group, $*$ is still associative over $S'$, the identity element is trivially of finite order and thus the only condition that remains to be satisfied is that every element has an inverse in $S'$.
+        Suppose $a^k=e$, this can be rewritten as $a*a^k=e$
+        $$\Rightarrow a^k=a^{-1}$$
+        Some inductive reasoning shows that:
+        $$\Rightarrow e=a^{-k}$$
+        $$\Rightarrow \left(a^{-1}\right)^k = e$$
+        This implies that $a^{-1}\in S'$ and thus $<S', *>$ is a group.
+    \end{solution}
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[36)] Prove that the generators of $\mathbb{Z}_n$ are the integers $r$ such that $1\leqr<n$ and $gcd(r,n)=1$.
+    \begin{solution} See scratch 4.0
+    \end{solution}
     \vspace{6pt}
     \hrule
     \vspace{6pt}
