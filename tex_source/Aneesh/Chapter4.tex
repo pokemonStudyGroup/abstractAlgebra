@@ -115,7 +115,36 @@ Prove that numbers that are relatively prime must be generators
             We know that for any finite group, there are a finite number of subgroups upper bounded by the cardinality of the powerset of the group.\\
             Therefore, we just need to show that there are no infinite groups with finite proper subgroups. Suppose $G$ is an infinite group with a finite collection of proper subgroups $S_G$.
         \end{solution}
-
+    \end{itemize}
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[2)] Find the order of each of the following elements.
+    \begin{itemize}
+        \item[a)] $5\in \mathbb{Z}_{12}$
+        \begin{solution}
+            $12$
+        \end{solution}
+        \item[b)] $\sqrt{3}\in \mathbb{R}$
+        \begin{solution}
+            $\infty$
+        \end{solution}
+        \item[c)] $\sqrt{3}\in \mathbb{R}^*$
+        \begin{solution}
+            $\infty$
+        \end{solution}
+        \item[d)] $-i\in \mathbb{C}^*$
+        \begin{solution}
+            $4$
+        \end{solution}
+        \item[e)] $72 \in \mathbb{Z}_{240}$
+        \begin{solution} \hfill \\
+            \texttt{ [(72*i)\%240 for i in range(240)].index(0, 1) \# = 10}
+        \end{solution}
+        \item[f)] $312 \in \mathbb{Z}_{471}$
+        \begin{solution} \hfill \\
+            \texttt{ [(312*i)\%417 for i in range(417)].index(0, 1) \# = 139}
+        \end{solution}
     \end{itemize}
     \vspace{6pt}
     \hrule
