@@ -1,0 +1,90 @@
+% ---------
+%  Compile with "pdflatex hw0".
+% --------
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{jeffe,handout,graphicx}
+\usepackage[utf8]{inputenc}     % Allow some non-ASCII Unicode in source
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{tikz}
+
+%  Redefine suits
+\usepackage{pifont}
+\def\Spade{\text{\ding{171}}}
+\def\Heart{\text{\textcolor{Red}{\ding{170}}}}
+\def\Diamond{\text{\textcolor{Red}{\ding{169}}}}
+\def\Club{\text{\ding{168}}}
+
+\def\Cdot{\mathbin{\text{\normalfont \textbullet}}}
+\def\Sym#1{\textbf{\texttt{\color{BrickRed}#1}}}
+\let\oriinfty=\infty
+\def\infty{{\oriinfty\llap{\vrule height.24em depth-.2em width.2em}}}
+
+%%% magic code starts
+\mathcode`*=\string"8000
+\begingroup
+\catcode`*=\active
+\xdef*{\noexpand\textup{\string*}}
+\endgroup
+%%% magic code ends
+%%% check mark
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
+% =====================================================
+%   Define common stuff for solution headers
+% =====================================================
+\Class{Abstract Algebra}
+\Semester{}
+\Authors{1}
+\AuthorOne{Aneesh Durg}
+%\Section{}
+
+% =====================================================
+\begin{document}
+% Copy this section again for a new solution
+% ---------------------------------------------------------
+\ExerciseHeader{4}{4} % replace Chapter with Exercise for a different header
+\begin{itemize}
+    \item[1)] 
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[2)] 
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[8)]
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+    \item[24)]
+    \begin{solution}\hfill \\
+        We just need to show that for any $(ab)$, we can construct it from the allowed transpositions. This is because any permutation can be built from transpositions.
+        \begin{itemize}
+            \item[a)]
+                $$(ab) = (1a)(1a)(ab) = (1a)(1ab) = (1a)(b1a) = (1a)(b1)(1a) = (1a)(1b)(1a)$$
+            \item[b)]
+                b:
+                (ab) = (aa')(aa')(ab) = (aa')(a'ab) = (aa')(a'ab)(bb')(bb')
+            \item[c)]\\
+                Show that we can get $(a a-1)$ for any $a$ from $(12...n) \forall n$ and then use part $b$. We also know that:
+                $$(a_1 \dots a_nb)(bc) = (a_1\dots a_nbc)$$
+                Using this:
+                $$(12)(123) = (12)(12)(23) = (23)$$
+                $$(12)(123)(12)(1234) = (23)(12)(123)(34) = (34)$$
+                can inductively generate any $(a a-1)$
+        \end{itemize}
+    \end{solution}
+    \vspace{6pt}
+    \hrule
+    \vspace{6pt}
+\end{itemize}
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+% ---------------------------------------------------------
+\end{document}
+
